@@ -8,6 +8,8 @@ const personas = [
 const buscarEmpresa = (f) => f.empresa === "Fibremex";
 const buscarJob = (f) => f.actividades[0].jobs === "Empleado";
 const filtrar = personas.filter(buscarJob);
-console.log(filtrar); //Extraer Registros
-const alguno = personas.some(buscarEmpresa); //Boleano
-console.log(alguno);
+console.log('Filter',filtrar); //Extraer Registros
+const buscar = personas.find(buscarEmpresa); 
+console.log('find',buscar);//Buscar un valor exacto o el primer valor que lo contenga 
+const alguno = personas.some(buscarEmpresa); 
+console.log('some',alguno);//Boleano
